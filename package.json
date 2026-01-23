@@ -18,8 +18,7 @@
     "@lytical/app": "^1.0.2",
     "@lytical/ioc": "^1.0.0",
     "dotenv": "^17.2.3",
-    "express": "^5.2.1",
-    "find-root": "^1.1.0"
+    "express": "^5.2.1"
   },
   "devDependencies": {
     "@types/chai": "^5.2.3",
