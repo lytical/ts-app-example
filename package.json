@@ -8,7 +8,7 @@
     "clean": "rimraf dist",
     "start": "cd dist&&nodemon --watch index.js",
     "test": "mocha --recursive dist/**/*.test.js",
-    "watch": "tsc --build --watch --excludeFiles src/**/*.test.ts&&gulp post_build"
+    "watch": "tsc -w --excludeFiles src/**/*.test.ts"
   },
   "keywords": [],
   "author": "",

@@ -17,7 +17,7 @@
         "kind": "build",
         "isDefault": true
       },
-      "dependsOn": "install",
+      "dependsOn": "clean",
       "problemMatcher": "$tsc",
       "label": "build",
       "detail": "build the project."
@@ -42,7 +42,7 @@
     {
       "type": "shell",
       "command": "npm run watch",
-      "dependsOn": "clean",
+      "dependsOn": "build",
       "problemMatcher": {
 				"base": "$tsc",
         "background": {
