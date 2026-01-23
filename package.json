@@ -1,0 +1,44 @@
+{
+  "name": "ts-app-example",
+  "version": "1.0.0",
+  "description": "this is an example application built with @lytical/app",
+  "main": "./{index.js,routes/**/*.js}",
+  "scripts": {
+    "build": "tsc --build&&gulp post_build",
+    "clean": "rimraf dist",
+    "start": "cd dist&&nodemon --watch index.js",
+    "test": "mocha --recursive dist/**/*.test.js",
+    "watch": "tsc --build --watch --excludeFiles src/**/*.test.ts&&gulp post_build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@lytical/app": "^1.0.1",
+    "@lytical/ioc": "^1.0.0",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "find-root": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^5.2.3",
+    "@types/express": "^5.0.6",
+    "@types/find-root": "^1.1.4",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^25.0.9",
+    "chai": "^6.2.2",
+    "gulp": "^5.0.1",
+    "mocha": "^11.7.5",
+    "nodemon": "^3.1.11",
+    "pump": "^3.0.3",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.js/**"
+    ],
+    "delay": 2500
+  }
+}

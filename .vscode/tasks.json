@@ -1,0 +1,59 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "npm",
+      "script": "start",
+      "problemMatcher": ["$tsc-watch"],
+      "label": "start",
+      "detail": "start debugging the project.",
+      "dependsOn": "watch",
+      "isBackground": true
+    },
+    {
+      "type": "npm",
+      "script": "build",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": "install",
+      "problemMatcher": "$tsc",
+      "label": "build",
+      "detail": "build the project."
+    },
+    {
+      "type": "npm",
+      "script": "clean",
+      "group": "build",
+      "problemMatcher": "$tsc",
+      "dependsOn": "install",
+      "label": "clean",
+      "detail": "clean the project."
+    },
+    {
+      "type": "npm",
+      "script": "install",
+      "group": "build",
+      "problemMatcher": [],
+      "label": "install",
+      "detail": "install npm packages."
+    },
+    {
+      "type": "shell",
+      "command": "npm run watch",
+      "dependsOn": "clean",
+      "problemMatcher": {
+				"base": "$tsc",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Starting compilation in watch mode\\.\\.\\.",
+          "endsPattern": "Found 0 errors\\. Watching for file changes\\."
+        }
+      },
+      "label": "watch",
+      "detail": "build and watch for changes in the project.",
+      "isBackground": true
+    }
+  ]
+}
