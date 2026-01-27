@@ -5,6 +5,10 @@ import { example_svc } from "../services/example-svc";
 
 /**
  * Example middleware class
+ * - constructors support injection for dependencies
+ * - middleware methods can have dependencies injected into them via method parameter injection
+ * - middleware method arguments must have all dependencies listed first, followed by
+ *   the standard express (Request, Response, NextFunction) parameters in that order
  */
 export class example_middleware_class {
   constructor(@ioc_inject(example_svc) private readonly _example_svc: example_svc) {}

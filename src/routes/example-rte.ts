@@ -16,6 +16,16 @@ import { example_middleware_class } from '../middleware/example-mw';
 
 /**
  * Example route class
+ * - routes are auto registered from the src/routes folder and any imported modules
+ * - route classes support constructor injection for dependencies
+ * - routes are registered in the express application
+ * - routes can have middleware dependencies injected into them via constructor injection
+ * - routes can have route handlers defined via method decorators
+ * - route handlers can have dependencies injected into them via method parameter injection
+ * - route handler method arguments must have all dependencies listed first, followed by
+ *   the standard express (Request, Response, NextFunction) parameters in that order
+ * - implement your route handlers in route classes
+ * - use handlers to pull data from the request, call services to perform business logic, and return responses
  */
 @app_route({ route: '/example' })
 export class example_route_class {
