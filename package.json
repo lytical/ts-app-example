@@ -15,8 +15,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@lytical/app": "^1.0.2",
-    "@lytical/ioc": "^1.0.0",
+    "@lytical/app": "^1.0.8",
     "dotenv": "^17.2.3",
     "express": "^5.2.1"
   },
