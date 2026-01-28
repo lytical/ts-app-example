@@ -1,6 +1,6 @@
 {
   "name": "ts-app-example",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "this is an example application built with @lytical/app",
   "main": "./{index.js,routes/**/*.js}",
   "scripts": {
@@ -15,7 +15,7 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@lytical/app": "^1.0.9",
+    "@lytical/app": "^1.0.10",
     "dotenv": "^17.2.3",
     "express": "^5.2.1"
   },

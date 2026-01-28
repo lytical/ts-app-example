@@ -8,7 +8,6 @@ import app, { app_evt } from '@lytical/app';
 // 1. create_server
 // 2. server_starting
 // 3. server_listening
-// 4. server_started
 
 app.once(app_evt.create_server, (cfg) => {
   // modify (cfg) as needed, or remove this listener if not needed.
@@ -32,11 +31,6 @@ app.once(app_evt.server_listening, () => {
   // remove this listener if not needed.
   // use it to perform operations after the server starts listening.
   // the ioc container is created and ready at this point.
-});
-
-app.once(app_evt.server_started, () => {
-  // remove this listener if not needed.
-  // use it to perform operations after the server has started.
 });
 
 app.start();
