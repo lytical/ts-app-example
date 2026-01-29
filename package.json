@@ -1,6 +1,6 @@
 {
   "name": "ts-app-example",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "this is an example application built with @lytical/app",
   "main": "./{index.js,routes/**/*.js}",
   "scripts": {
