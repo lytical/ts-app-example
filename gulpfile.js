@@ -2,4 +2,4 @@ const _gulp = require('gulp');
 const _pump = require('pump');
 
 exports.post_build = (done) =>
-  _pump(_gulp.src(['.env']), _gulp.dest('./dist'), done);
+  _pump(_gulp.src(['.env', '.env.*']), _gulp.dest('./dist'), done);

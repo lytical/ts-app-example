@@ -9,10 +9,12 @@ about the dependencies injection features included
 
 ## local development
 
-create a `.env` file in the project root, to set environment variables.
+add an `.env.local` file to to the root, to set sensitive environmental variable, that are not included in the git repository.
 
 ```
-// .env
+
+// .env.local
+
 PORT=4100
 AzureWebJobsStorage=...
 SVC_API_KEY=...
